@@ -249,9 +249,9 @@ app.controller("AssistancesClausesGeneralController", function ($scope, $locatio
                 language: currentLang !== undefined ? currentLang : spanish
             });
 
-        setInterval(function () {
-            table.ajax.reload(null, false); // user paging is not reset on reload
-        }, 10000);
+        //setInterval(function () {
+        //    table.ajax.reload(null, false); // user paging is not reset on reload
+        //}, 10000);
 
         // Listener for opening and closing details
         $("#UsersTable tbody").on("click", "td.details-control", function () {
