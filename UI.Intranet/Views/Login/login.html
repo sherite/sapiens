@@ -1,0 +1,55 @@
+﻿
+
+<div class="lockscreen-wrapper" ng-init="Initialize()">
+
+    <div class="lockscreen-logo"> 
+
+        <img src="images/ac_logo1.png"/>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-body login-card-body">
+
+            <form name="LoginForm">
+
+                <div>
+
+                    <div style="display:flex">
+
+                        <input style="margin-right:10px" ng-model="username" my-enter="formSubmit()" type="text" class="form-control roundedCAP" placeholder={{'index.username'|translate}} required>
+                        <span class="fa fa-user" style="float:right;font-size:30px"></span>
+
+                    </div>
+
+                    <br />
+
+                </div>
+
+                <div style="display:flex">
+
+                    <input style="margin-right:10px" type="password" autocomplete="off" class="form-control roundedCAP" ng-model="password" my-enter="formSubmit()" placeholder={{'index.password'|translate}} required>
+                    <span class="fa fa-lock" style="float:right;font-size:30px"></span>
+
+                </div>
+
+                <br />
+
+                <div>
+
+                    <button ng-disabled="LoginForm.$invalid" type="button" class="btn btn-primary btn-block roundedCAP" ng-click="formSubmit()">{{'index.login'|translate}}</button>
+
+                </div>
+
+            </form>
+
+            <p class="mb-1"><a href="#forgot-password">{{forgotPassword}}</a></p>
+
+            <p class="mb-0"><a href="#register" class="text-center">{{register}}</a></p>
+
+        </div>
+
+    </div>
+
+ </div>

@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/packages
+/.vs
+/dbERP
+/Entities/bin
+/Entities/obj
+/SPS_SDL_SQL/bin
+/SPS_SDL_SQL/obj
+/UI.Intranet/bin
+/UI.Intranet/obj
+/UI.Extranet/bin
+/UI.Extranet/obj
+/SPS_SDL_SQL/obj
+/Sherite.ERP.Common/bin
+/Sherite.ERP.Common/obj
+/MSSQLDataLayer/bin
+/MSSQLDataLayer/obj
+/GenericDataLayer/obj

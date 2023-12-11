@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\APPS\LAB\MYERP\GDL2</_PublishTargetUrl>
+    <History>True|2023-10-06T03:18:00.0092373Z;True|2023-08-18T14:46:14.4409197-03:00;True|2023-08-18T14:40:15.5025014-03:00;True|2023-08-18T14:31:16.0291897-03:00;True|2023-08-18T14:30:01.1943130-03:00;True|2023-08-18T14:28:09.5652175-03:00;False|2023-08-18T14:23:19.8740111-03:00;False|2023-08-18T14:22:42.1530951-03:00;False|2023-08-18T14:22:27.6890439-03:00;False|2023-08-18T14:22:12.8286996-03:00;False|2023-08-18T14:21:55.5490927-03:00;True|2023-08-18T14:20:28.6349741-03:00;False|2023-08-18T14:19:18.2303269-03:00;False|2023-08-18T14:14:54.7292072-03:00;False|2023-08-18T14:14:27.6862195-03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="App_Start/Register.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="App_Start/RouteConfig.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="App_Start/SwaggerConfig.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="App_Start/WebApiConfig.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 13:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 13:29:20</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>08/18/2023 14:30:00</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>08/18/2023 14:30:00</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>08/18/2016 12:15:34</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>04/10/2017 12:40:32</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>06/18/2018 10:00:14</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.pdb">
+      <publishTime>06/18/2018 10:00:14</publishTime>
+    </File>
+    <File Include="bin/Entities.dll">
+      <publishTime>08/18/2023 14:23:34</publishTime>
+    </File>
+    <File Include="bin/Entities.pdb">
+      <publishTime>08/18/2023 14:23:34</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/16/2019 00:00:22</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>11/16/2019 00:00:40</publishTime>
+    </File>
+    <File Include="bin/GenericDataLayer.dll">
+      <publishTime>08/18/2023 14:40:15</publishTime>
+    </File>
+    <File Include="bin/GenericDataLayer.pdb">
+      <publishTime>08/18/2023 14:40:15</publishTime>
+    </File>
+    <File Include="bin/GenericDataLayer.xml">
+      <publishTime>08/18/2023 14:40:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>06/27/2017 09:59:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNetCore.Cors.dll">
+      <publishTime>11/12/2018 14:38:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNetCore.Http.Abstractions.dll">
+      <publishTime>11/12/2018 14:29:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNetCore.Http.Extensions.dll">
+      <publishTime>11/12/2018 14:29:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNetCore.Http.Features.dll">
+      <publishTime>11/12/2018 14:28:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>11/10/2018 21:26:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>11/10/2018 21:26:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.FileProviders.Abstractions.dll">
+      <publishTime>11/10/2018 21:26:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>11/10/2018 21:26:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Options.dll">
+      <publishTime>11/10/2018 21:26:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Primitives.dll">
+      <publishTime>11/10/2018 21:26:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Net.Http.Headers.dll">
+      <publishTime>11/12/2018 14:28:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>01/18/2019 17:50:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>01/18/2019 17:50:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 08:48:56</publishTime>
+    </File>
+    <File Include="bin/MSSQLDataLayer.dll">
+      <publishTime>08/18/2023 14:23:34</publishTime>
+    </File>
+    <File Include="bin/MSSQLDataLayer.dll.config">
+      <publishTime>05/18/2023 11:42:10</publishTime>
+    </File>
+    <File Include="bin/MSSQLDataLayer.pdb">
+      <publishTime>08/18/2023 14:23:34</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/24/2018 14:44:14</publishTime>
+    </File>
+    <File Include="bin/NLog.config">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>04/30/2019 16:48:12</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/13/2012 09:19:34</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>09/30/2013 14:36:38</publishTime>
+    </File>
+    <File Include="bin/SPS_SDL_SQL.dll">
+      <publishTime>08/18/2023 14:23:34</publishTime>
+    </File>
+    <File Include="bin/SPS_SDL_SQL.dll.config">
+      <publishTime>05/18/2023 11:42:10</publishTime>
+    </File>
+    <File Include="bin/SPS_SDL_SQL.pdb">
+      <publishTime>08/18/2023 14:23:34</publishTime>
+    </File>
+    <File Include="bin/Swashbuckle.Core.dll">
+      <publishTime>07/07/2017 22:30:56</publishTime>
+    </File>
+    <File Include="bin/System.Buffers.dll">
+      <publishTime>05/15/2018 10:29:34</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.Annotations.dll">
+      <publishTime>05/15/2018 10:29:36</publishTime>
+    </File>
+    <File Include="bin/System.Memory.dll">
+      <publishTime>06/06/2018 10:29:04</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 10:00:36</publishTime>
+    </File>
+    <File Include="bin/System.Numerics.Vectors.dll">
+      <publishTime>07/19/2017 07:01:36</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>06/06/2018 10:29:04</publishTime>
+    </File>
+    <File Include="bin/System.Text.Encodings.Web.dll">
+      <publishTime>05/15/2018 10:29:52</publishTime>
+    </File>
+    <File Include="bin/System.ValueTuple.dll">
+      <publishTime>05/15/2018 10:29:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>11/28/2018 09:58:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/10/2018 19:42:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>11/28/2018 10:01:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/28/2018 10:01:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>05/10/2018 19:41:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/10/2018 19:38:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 12:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/10/2018 19:38:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/10/2018 19:42:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/10/2018 19:42:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/10/2018 19:42:40</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>10/05/2016 10:11:52</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 10:57:34</publishTime>
+    </File>
+    <File Include="Configuration/ConfigurationHandler.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Controllers/DynamicMenuSideBarController.cs">
+      <publishTime>08/17/2023 15:06:30</publishTime>
+    </File>
+    <File Include="Controllers/GroupsController.cs">
+      <publishTime>08/17/2023 15:06:30</publishTime>
+    </File>
+    <File Include="Controllers/LoginController.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Controllers/RightsController.cs">
+      <publishTime>08/17/2023 15:06:30</publishTime>
+    </File>
+    <File Include="Controllers/RolesController.cs">
+      <publishTime>08/17/2023 15:06:30</publishTime>
+    </File>
+    <File Include="Controllers/UsuariosController.cs">
+      <publishTime>08/17/2023 08:40:17</publishTime>
+    </File>
+    <File Include="DTOs/Mapping/ModelMapping.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="GenericDataLayer.csproj">
+      <publishTime>08/18/2023 14:27:52</publishTime>
+    </File>
+    <File Include="GenericDataLayer.csproj.user">
+      <publishTime>08/18/2023 14:40:14</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Global.asax.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Interfaces/IBankAccountsManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Interfaces/IDynamicMenuSideBarManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Interfaces/IUsuariosManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/DynamicMenuSideBarManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/GruposManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/PermisosManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/RolesManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/UserInfoOverviewManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/UserRolesManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/UsuarioGruposManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Managers/UsuariosManager.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="NLog.config">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="NLog.xsd">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/18/2023 11:42:10</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>08/18/2023 14:29:55</publishTime>
+    </File>
+    <File Include="Properties/AssemblyInfo.cs">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/18/2023 14:31:15</publishTime>
+    </File>
+    <File Include="Web.Debug.config">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+    <File Include="Web.Release.config">
+      <publishTime>05/18/2023 11:42:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

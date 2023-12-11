@@ -1,0 +1,65 @@
+﻿<div id="cover-spin"></div>
+<div data-ng-init="Inicializar()">
+    <h4><b>VISUALIZACION DE PERMISOS</b></h4>
+    <div class="panel">
+        <div class="row panel-body table-responsive" style="width: 98%; margin-left: 1%">
+            <div class="row">
+                <a role='button' data-ng-click="go('/permisos')" class="fa fa-reply btn btn-warning pull-right" style="margin-left: 1%">&nbsp VOLVER</a>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                
+                <div>
+                    
+                    <div class="row">
+
+                        <div class="col-lg-3">
+
+                            <label for="PERMISO_ID">ID</label>
+
+                            <label id="PERMISO_ID">{{permiso.ID}}</label>
+
+                        </div>
+
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+
+                        <div class="col-lg-3">
+
+                            <label for="PERMISO_NOMBRE">Nombre</label>
+
+                            <input id="PERMISO_NOMBRE" data-ng-model="permiso.Nombre" aria-readonly="true" disabled />
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <label for="PERMISO_DESCRIPCION">Descripción</label>
+
+                            <input id="PERMISO_DESCRIPCION" data-ng-model="permiso.Descripcion"  aria-readonly="true" disabled style="width:250px;"/>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-3">
+
+                            <label for="PERMISO_ESTADO">Activo</label>
+                            <input id="PERMISO_ESTADO" type="checkbox" title="Activo" aria-readonly="true" disabled />
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

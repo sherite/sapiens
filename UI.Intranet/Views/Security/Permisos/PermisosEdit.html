@@ -1,0 +1,84 @@
+﻿<div id="cover-spin"></div>
+<div ng-init="Inicializar()">
+
+    <h4><b>{{lblRightsIU}}</b></h4>
+   
+    <div class="panel" style="height:760px">
+
+        <div class="row panel-body" style="width:98%;margin-left:1%">
+
+                <a role='button' data-ng-click="go('/permisos')" class="fa fa-reply btn btn-warning pull-right" style="margin-left: 1%">&nbsp {{'index.btnBack'|translate}}</a>
+
+            <div class="col-lg-4">
+
+                <label id="lblInheritsPermissionsFrom">Heredar de: </label>
+
+                <select class="custom-select" style="width:65%">
+                    <option selected>Elija una opci&oacute;n...</option>
+                    <option value="1">Administraci&oacute;n</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="row" style="width:98%;margin-left:1%">
+
+            <div class="col-lg-4">
+
+                Opcion
+                <div class="panel panel-default" style="height:550px">
+                    <div class="panel-body" style="height:450px">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                Niveles de Acceso
+                <div class="panel panel-default" style="height:550px">
+                    <div class="panel-body" style="height:450px">
+
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked><i class="fa fa-minus-circle">&nbsp;Sin acceso</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"><i class="fa fa-search">&nbsp;Ver</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"><i class="fa fa-pencil">&nbsp;Editar</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"><i class="fa fa-file-o">&nbsp;Crear</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"><i class="fa fa-check">&nbsp;Control total</i></label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                Ayuda
+                <div class="panel panel-default" style="height:550px">
+
+                    <div class="panel-body" style="height:450px"></div>
+
+                </div>
+
+                <a role='button' id="btnSave" class="pull-right btn btn-primary" style="margin-left: 1%">&nbspGUARDAR</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

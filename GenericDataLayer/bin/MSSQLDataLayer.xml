@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MSSQLDataLayer</name>
+    </assembly>
+    <members>
+        <member name="T:MSSQLDataLayer.BankAccountOverview">
+            <summary>
+            BankAccountOverview data layer
+            </summary>
+        </member>
+        <member name="M:MSSQLDataLayer.BankAccountOverview.Insert(Entities.DTOs.BankAccountOverview)">
+            <summary>
+            insert method
+            </summary>
+            <param name="bankAccountOverview"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MSSQLDataLayer.BankAccountOverview.Select">
+            <summary>
+            select method
+            </summary>
+        </member>
+        <member name="M:MSSQLDataLayer.BankAccountOverview.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idBankAccountOverview"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MSSQLDataLayer.BankAccountOverview.Update(Entities.DTOs.BankAccountOverview)">
+            <summary>
+            
+            </summary>
+            <param name="bankAccountOverview"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MSSQLDataLayer.Models.BaseDatos">
+            <summary>
+            contexto
+            </summary>
+        </member>
+        <member name="M:MSSQLDataLayer.Models.BaseDatos.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.BaseDatos.BankAccountsOverview">
+            <summary>
+            bancos
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.BaseDatos.UserInfoOverview">
+            <summary>
+            usuarios
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.BaseDatos.DynamicMenuSideBar">
+            <summary>
+            Dynamic menu sidebar
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.BaseDatos.Menus">
+            <summary>
+            menu side bar
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.BaseDatos.MenusTexto">
+            <summary>
+            textos
+            </summary>
+        </member>
+        <member name="T:MSSQLDataLayer.Models.VWDynamicMenuSideBar">
+            <summary>
+            aaa
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.Modulo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.Padre">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.Orden">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.Tipo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.Accion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MSSQLDataLayer.Models.VWDynamicMenuSideBar.Texto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MSSQLDataLayer.DynamicMenuSideBar">
+            <summary>
+            DynamicMenuSideBar data layer
+            </summary>
+        </member>
+        <member name="M:MSSQLDataLayer.DynamicMenuSideBar.Select">
+            <summary>
+            select method
+            </summary>CON
+        </member>
+        <member name="T:MSSQLDataLayer.UserInfoOverview">
+            <summary>
+            BankAccountOverview data layer
+            </summary>
+        </member>
+        <member name="M:MSSQLDataLayer.UserInfoOverview.Insert(Entities.DTOs.UserInfoOverview)">
+            <summary>
+            insert method
+            </summary>
+            <param name="userInfoOverview"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MSSQLDataLayer.UserInfoOverview.Select">
+            <summary>
+            select method
+            </summary>
+        </member>
+        <member name="M:MSSQLDataLayer.UserInfoOverview.Delete(System.Int32)">
+            <summary>
+            delete an element
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MSSQLDataLayer.UserInfoOverview.Update(Entities.DTOs.UserInfoOverview)">
+            <summary>
+            update an element
+            </summary>
+            <param name="userInfoOverview"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,71 @@
+﻿<div id="cover-spin"></div>
+<div data-ng-init="Inicializar()">
+
+    <h4><b>{{'index.titleRights'|translate}}</b></h4>
+
+    <div class="panel">
+
+        <div class="row panel-body table-responsive" style="width: 98%; margin-left: 1%">
+
+            <div class="row">
+
+                <a role='button' data-ng-click="SaveData()" class="fa fa-save btn btn-primary pull-left" style="margin-left: 1%">&nbsp GUARDAR</a>
+
+                <a role='button' data-ng-click="go('/permisos')" class="fa fa-reply btn btn-warning pull-right" style="margin-left: 1%">&nbsp VOLVER</a>
+
+            </div>
+
+            <br />
+
+            <div class="form-group" id="divPermiso">
+
+                <div class="row">
+
+                    <div class="col-lg-3">
+
+                        <label for="PERMISO_ID">ID</label>
+
+                        <label id="PERMISO_ID">{{permiso.ID}}</label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3">
+
+                    <label for="PERMISO_NOMBRE">Nombre</label>
+
+                    <input id="PERMISO_NOMBRE" data-ng-change="chgPermiso()" data-ng-model="permiso.Nombre" />
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <label for="PERMISO_DESCRIPCION">Descripción</label>
+
+                    <input id="PERMISO_DESCRIPCION" data-ng-change="chgDescripcion()" data-ng-model="permiso.Descripcion" />
+
+                </div>
+
+            </div>
+
+            <div class="row" id="divEstado">
+
+                <div class="col-lg-3">
+
+                    <label for="PERMISO_ESTADO">Activo</label>
+
+                    <input id="PERMISO_ESTADO" type="checkbox" data-ng-click="checkEstado()" />
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

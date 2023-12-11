@@ -1,0 +1,29 @@
+﻿<div id="cover-spin"></div>
+<div data-ng-init="Initialize()">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4><b>{{lblUsersIU}}</b></h4>
+
+                    <div class="row">
+                        <a role='button' id="btnNewUser" data-ng-click="go('usersEdit','insert')" class="fa fa-plus btn btn-primary" style="margin-left: 1%"><span style="padding:5px">NUEVO REGISTRO</span></a>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+
+                    <table id="UsersTable" class="table table-bordered table-hover" style="width: 100%">
+                    </table>
+
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>

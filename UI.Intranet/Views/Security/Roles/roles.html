@@ -1,0 +1,14 @@
+﻿<div id="cover-spin"></div>
+<div data-ng-init="Initialize()">
+    <h4><b>{{'index.titleRoles'|translate}}</b></h4>
+    <div class="panel" style="height:760px">
+        <div class="row panel-body table-responsive" style="width: 98%; margin-left: 1%">
+            <div class="row">
+                <a role='button' id="btnNewRol" data-ng-click="go('rolesEdit','insert')" class="fa fa-plus btn btn-primary" style="margin-left: 1%">&nbsp{{'index.newRol'|translate}}</a>
+            </div>
+            <br />
+            <table id="RolesTable" class="table table-hover table-striped table-bordered" style="width: 100%">
+            </table>
+        </div>
+    </div>
+</div>

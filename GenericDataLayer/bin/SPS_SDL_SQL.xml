@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPS_SDL_SQL</name>
+    </assembly>
+    <members>
+        <member name="T:SPS_SDL_SQL.General">
+            <summary>
+            clase de metodos generales
+            </summary>
+        </member>
+        <member name="P:SPS_SDL_SQL.General.ConnStr">
+            <summary>
+            cadena de conexion
+            </summary>
+        </member>
+        <member name="P:SPS_SDL_SQL.General.Connection">
+            <summary>
+            Conexion al SQL Server
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.General.Connect">
+            <summary>
+            Conecta a una base de datos
+            </summary>
+            <returns>Estado de la conexion</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.General.DesConecta">
+            <summary>
+            Desconecta el SQL Server
+            </summary>
+        </member>
+        <member name="P:SPS_SDL_SQL.General.ConnStrGTF">
+            <summary>
+            cadena de conexion
+            </summary>
+        </member>
+        <member name="P:SPS_SDL_SQL.General.ConnectionGTF">
+            <summary>
+            Conexion al SQL Server
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.General.ConnectGTF">
+            <summary>
+            Conecta a una base de datos
+            </summary>
+            <returns>Estado de la conexion</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.General.DesConectaGTF">
+            <summary>
+            Desconecta el SQL Server
+            </summary>
+        </member>
+        <member name="T:SPS_SDL_SQL.Groups">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Groups.Select(Entities.Helpers.Paging,Entities.Helpers.Ordering,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="paging"></param>
+            <param name="ordering"></param>
+            <param name="groupId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Groups.Find(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Groups.Update(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="base64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Groups.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Groups.Insert(System.String)">
+            <summary>
+            Insert a new Group
+            </summary>
+            <param name="base64">group data in base64</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPS_SDL_SQL.Ordenamiento">
+            <summary>
+            objeto de ordenamiento
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Ordenamiento.#ctor(System.String,SPS_SDL_SQL.OrdenamientoDB)">
+            <summary>
+            constructor
+            </summary>
+            <param name="columna"></param>
+            <param name="ordenamiento"></param>
+        </member>
+        <member name="P:SPS_SDL_SQL.Ordenamiento.OrdenamientoDTO">
+            <summary>
+            objeto de ordenamiento
+            </summary>
+        </member>
+        <member name="T:SPS_SDL_SQL.OrdenamientoDTO">
+            <summary>
+            DTO de ordenamiento
+            </summary>
+        </member>
+        <member name="P:SPS_SDL_SQL.OrdenamientoDTO.ColumnaOrdenamiento">
+            <summary>
+            columna a ordenar
+            </summary>
+        </member>
+        <member name="P:SPS_SDL_SQL.OrdenamientoDTO.SentidoOrdenamiento">
+            <summary>
+            sentido de ordenamiento
+            </summary>
+        </member>
+        <member name="T:SPS_SDL_SQL.OrdenamientoDB">
+            <summary>
+            enum de ordenamiento
+            </summary>
+        </member>
+        <member name="F:SPS_SDL_SQL.OrdenamientoDB.ASC">
+            <summary>
+            Orden ascendente
+            </summary>
+        </member>
+        <member name="F:SPS_SDL_SQL.OrdenamientoDB.DESC">
+            <summary>
+            Orden descendente
+            </summary>
+        </member>
+        <member name="T:SPS_SDL_SQL.Roles">
+            <summary>
+             Capa de datos de Grupos
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Roles.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Roles.Select(System.Object,System.Object,System.Nullable{System.UInt64})">
+            <summary>
+             Lista Grupos filtrados
+            </summary>
+            <returns>Lista fltrada</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Roles.Find(System.Int32)">
+            <summary>
+             Busca un Grupo especifico
+            </summary>
+            <param name="id">Grupo a buscar</param>
+            <returns>lista con el Grupo si lo encontro, sino vacia</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Roles.Update(System.String)">
+            <summary>
+            Actualiza un Grupo
+            </summary>
+            <param name="base64">encoding de entrada</param>
+            <returns>Grupo actualizado</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Roles.Delete(System.Int32)">
+            <summary>
+            Borra un Grupo especifico
+            </summary>
+            <param name="id"></param>
+            <returns>resultado del borrado</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Roles.Insert(System.String)">
+            <summary>
+            Inserta un Rol
+            </summary>
+            <param name="base64">datos a insertar</param>
+            <returns>Grupo insertado</returns>
+        </member>
+        <member name="T:SPS_SDL_SQL.Permisos">
+            <summary>
+             Capa de datos de Grupos
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Permisos.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Permisos.Select(System.Object,System.Object,System.Nullable{System.UInt64})">
+            <summary>
+             Lista Grupos filtrados
+            </summary>
+            <returns>Lista fltrada</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Permisos.Find(System.Int32)">
+            <summary>
+             Busca un Grupo especifico
+            </summary>
+            <param name="id">Grupo a buscar</param>
+            <returns>lista con el Grupo si lo encontro, sino vacia</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Permisos.Update(System.String)">
+            <summary>
+            Actualiza un Grupo
+            </summary>
+            <param name="base64">encoding de entrada</param>
+            <returns>Grupo actualizado</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Permisos.Delete(System.Int32)">
+            <summary>
+            Borra un Grupo especifico
+            </summary>
+            <param name="id"></param>
+            <returns>resultado del borrado</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Permisos.Insert(System.String)">
+            <summary>
+            Inserta un Grupo
+            </summary>
+            <param name="base64">datos a insertar</param>
+            <returns>Grupo insertado</returns>
+        </member>
+        <member name="T:SPS_SDL_SQL.UserRoles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.Select(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.SelectUsers(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.Find(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.Update(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="base64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.DeleteUsers(System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="idRol"></param>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.Delete(System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="idUsuario"></param>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.InsertFromNewUser(System.Int32,System.Int32,System.Data.OleDb.OleDbCommand)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="roleId"></param>
+            <param name="cmd"></param>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserRoles.Insert(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="roleId"></param>
+        </member>
+        <member name="T:SPS_SDL_SQL.UserGroups">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.Select(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.SelectUsers(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="groupId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.Find(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.Update(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="base64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.DeleteUsers(System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="idGrupo"></param>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.Delete(System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="idUsuario"></param>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.InsertFromNewUser(System.Int32,System.Int32,System.Data.OleDb.OleDbCommand)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="groupId"></param>
+            <param name="cmd"></param>
+        </member>
+        <member name="M:SPS_SDL_SQL.UserGroups.Insert(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="groupId"></param>
+        </member>
+        <member name="T:SPS_SDL_SQL.Users">
+            <summary>
+             User's data layer.
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.Login(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.Select(System.Object,System.Object,System.Nullable{System.UInt64})">
+            <summary>
+             Filtered User's list.
+            </summary>
+            <returns>filtered list</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.Find(System.Nullable{System.Int32})">
+            <summary>
+             Find a specifc user.
+            </summary>
+            <param name="id">User to find</param>
+            <returns>a List</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.Update(System.String)">
+            <summary>
+            Update an user.
+            </summary>
+            <param name="base64">input encoding</param>
+            <returns>user updated</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Delete a user
+            </summary>
+            <param name="id"></param>
+            <returns>result</returns>
+        </member>
+        <member name="M:SPS_SDL_SQL.Users.Insert(System.String)">
+            <summary>
+            Insert a user
+            </summary>
+            <param name="base64">data to insert</param>
+            <returns>user inserted</returns>
+        </member>
+    </members>
+</doc>

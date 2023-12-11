@@ -1,0 +1,110 @@
+﻿<div id="cover-spin"></div>
+<div ng-init="Inicializar()">
+
+    <h4><b>{{lblRightsIU}}</b></h4>
+
+    <div class="panel" style="height:760px">
+
+        <div class="row panel-body" style="width:98%;margin-left:1%">
+
+                <a role='button' data-ng-click="go('/permisos')" class="fa fa-reply btn btn-warning pull-right" style="margin-left: 1%">&nbsp {{'index.btnBack'|translate}}</a>
+
+        </div>
+
+        <div class="row" style="width:98%;margin-left:1%">
+
+            <div class="col-lg-4">
+
+                Opcion
+                <div class="panel panel-default" style="height:550px">
+                    <div class="panel-body" style="height:450px">
+
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-gears"></i><span>{{'index.configuration'|translate}}</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="treeview-menu">
+
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-shield"></i><span>{{'index.preferences'|translate}}</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#languages"><i class="fa fa-language"></i>{{'index.language'|translate}}</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-shield"></i><span>{{'index.security'|translate}}</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#grupos"><i class="fa fa-users"></i>{{'index.groups'|translate}}</a></li>
+                                        <li><a href="#permisos"><i class="fa fa-lock"></i>{{'index.rights'|translate}}</a></li>
+                                        <li><a href="#roles"><i class="fa fa-vcard"></i>{{'index.roles'|translate}}</a></li>
+                                        <li><a href="#users"><i class="fa fa-user"></i>{{'index.users'|translate}}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                Niveles de Acceso
+                <div class="panel panel-default" style="height:550px">
+                    <div class="panel-body" style="height:450px">
+
+                        <div class="radio">
+                            <label><i class="fa fa-minus-circle">&nbsp;Sin acceso</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><i class="fa fa-search">&nbsp;Ver</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><i class="fa fa-pencil">&nbsp;Editar</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><i class="fa fa-file-o">&nbsp;Crear</i></label>
+                        </div>
+                        <div class="radio">
+                            <label><i class="fa fa-check">&nbsp;Control total</i></label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                Ayuda
+                <div class="panel panel-default" style="height:550px">
+
+                    <div class="panel-body" style="height:450px"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+ </div>
+

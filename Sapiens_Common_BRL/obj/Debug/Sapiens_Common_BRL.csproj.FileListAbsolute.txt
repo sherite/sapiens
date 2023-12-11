@@ -1,0 +1,12 @@
+C:\Users\sheri\source\repos\MyERP\Sapiens_Common_BRL\bin\Debug\Sapiens_Common_BRL.dll
+C:\Users\sheri\source\repos\MyERP\Sapiens_Common_BRL\bin\Debug\Sapiens_Common_BRL.pdb
+C:\Users\sheri\source\repos\MyERP\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.csproj.AssemblyReference.cache
+C:\Users\sheri\source\repos\MyERP\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.csproj.CoreCompileInputs.cache
+C:\Users\sheri\source\repos\MyERP\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.dll
+C:\Users\sheri\source\repos\MyERP\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.pdb
+C:\sapiens\Sapiens_Common_BRL\bin\Debug\Sapiens_Common_BRL.dll
+C:\sapiens\Sapiens_Common_BRL\bin\Debug\Sapiens_Common_BRL.pdb
+C:\sapiens\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.csproj.AssemblyReference.cache
+C:\sapiens\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.csproj.CoreCompileInputs.cache
+C:\sapiens\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.dll
+C:\sapiens\Sapiens_Common_BRL\obj\Debug\Sapiens_Common_BRL.pdb

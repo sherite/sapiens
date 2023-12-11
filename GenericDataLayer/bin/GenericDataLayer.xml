@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GenericDataLayer</name>
+    </assembly>
+    <members>
+        <member name="T:GenericDataLayer.Register">
+            <summary>
+            Register class
+            </summary>
+        </member>
+        <member name="P:GenericDataLayer.Register.Builder">
+            <summary>
+            Gets or sets the builder.
+            </summary>
+            <value>
+            The builder.
+            </value>
+        </member>
+        <member name="M:GenericDataLayer.Register.RegisterTypes">
+            <summary>
+            Registers the types.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Register.RegisterServices">
+            <summary>
+            Registers the services.
+            </summary>
+        </member>
+        <member name="T:GenericDataLayer.RouteConfig">
+            <summary>
+            Configurador de rutas
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Registro de rutas
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="T:GenericDataLayer.SwaggerConfig">
+            <summary>
+            Configuracion de Swagger
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.SwaggerConfig.Register">
+            <summary>
+            Registro de Swagger
+            </summary>
+        </member>
+        <member name="T:GenericDataLayer.WebApiConfig">
+            <summary>
+            Configuracion de Webapi
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registro de WebAPI
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:GenericDataLayer.Configuration.ConfigurationHandler">
+            <summary>
+            Manager de claves del web.config
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Configuration.ConfigurationHandler.idEntity">
+            <summary>
+            retorna la entidad
+            </summary>
+            <returns>entidad sobre la que se esta operando</returns>
+        </member>
+        <member name="M:GenericDataLayer.Configuration.ConfigurationHandler.EnginePath">
+            <summary>
+            retorna el motor de base de datos utilizado
+            </summary>
+            <returns>nombre del motor</returns>
+        </member>
+        <member name="M:GenericDataLayer.Configuration.ConfigurationHandler.EngineMSSQL">
+            <summary>
+            retorna el motor de base de datos utilizado
+            </summary>
+            <returns>nombre del motor</returns>
+        </member>
+        <member name="T:GenericDataLayer.Controllers.GroupsController">
+            <summary>
+            Groups Controller
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.GroupsController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.GroupsController.GetByID(System.Int32)">
+            <summary>
+            Get a group based on its identifier
+            </summary>
+            <param name="id">unique identifier</param>
+            <returns>a group based in id passed as parameter</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.GroupsController.Get(System.Nullable{System.Int32},System.String,Entities.Helpers.OrderingDTO,Entities.Helpers.PaginedDTO,System.Nullable{System.Int32})">
+            <summary>
+            Get a list of groups based in its filtered conditions
+            </summary>
+            <param name="idGroup">group identifier</param>
+            <param name="alias">group alias</param>
+            <param name="orderingDTO">ordering condition</param>
+            <param name="paginedDTO">paging condition</param>
+            <param name="userId">user identifier</param>
+            <returns>a list of groups based in filters passed as parameters</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.GroupsController.Post(Entities.DTOs.GroupDTO)">
+            <summary>
+            Post a new group
+            </summary>
+            <param name="group">group to post</param>
+            <returns>Manager Response object with post result</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.GroupsController.Put(Entities.DTOs.GroupDTO)">
+            <summary>
+            Modify an existing group
+            </summary>
+            <param name="group">group to modify</param>
+            <returns>Manager Response with group modified</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.GroupsController.Delete(System.Int32)">
+            <summary>
+            Delete a group
+            </summary>
+            <param name="id">unique identifier</param>
+            <returns>result of delete operation</returns>
+        </member>
+        <member name="T:GenericDataLayer.Controllers.RightsController">
+            <summary>
+            gestion de Roles
+            </summary>
+        </member>
+        <member name="F:GenericDataLayer.Controllers.RightsController.Logger">
+            <summary>
+            logger de nlog 
+            </summary>
+        </member>
+        <member name="F:GenericDataLayer.Controllers.RightsController.rightsManager">
+            <summary>
+            Manager de usuarios
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RightsController.#ctor">
+            <summary>
+            constructor parameterless
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RightsController.GetByID(System.UInt64)">
+            <summary>
+            Obtiene una lista de un usuario determinado
+            </summary>
+            <param name="id">Identificador unico</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RightsController.Get(System.Nullable{System.UInt64},System.String,Entities.Helpers.OrderingDTO,Entities.Helpers.PaginedDTO)">
+            <summary>
+            Lista de usuarios
+            </summary>
+            <param name="idRight">id de usuario</param>
+            <param name="alias">alias del usuario</param>
+            <param name="orderingDTO">objeto ordenamiento</param>
+            <param name="paginedDTO">objeto paginado</param>
+            <returns>lista generica de usuarios</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RightsController.Post(Entities.DTOs.RightDTO)">
+            <summary>
+            Agrega un usuario
+            </summary>
+            <param name="permiso">Usuario</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RightsController.Put(Entities.DTOs.RightDTO)">
+            <summary>
+            Modifica un usuario 
+            </summary>
+            <param name="permiso">usuario</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RightsController.Delete(System.UInt64)">
+            <summary>
+            Elimina un usuario
+            </summary>
+            <param name="id">id del usuario a eliminar</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="T:GenericDataLayer.Controllers.RolesController">
+            <summary>
+            gestion de Roles
+            </summary>
+        </member>
+        <member name="F:GenericDataLayer.Controllers.RolesController.Logger">
+            <summary>
+            logger de nlog 
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RolesController.#ctor">
+            <summary>
+            constructor parameterless
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RolesController.GetByID(System.UInt64)">
+            <summary>
+            Obtiene una lista de un usuario determinado
+            </summary>
+            <param name="id">Identificador unico</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RolesController.Get(System.Nullable{System.UInt64},System.String,Entities.Helpers.OrderingDTO,Entities.Helpers.PaginedDTO)">
+            <summary>
+            Lista de usuarios
+            </summary>
+            <param name="idRol">id de usuario</param>
+            <param name="alias">alias del usuario</param>
+            <param name="ordenDTO">objeto ordenamiento</param>
+            <param name="paginadoDTO">objeto paginado</param>
+            <returns>lista generica de usuarios</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RolesController.Post(Entities.DTOs.RolDTO)">
+            <summary>
+            Agrega un usuario
+            </summary>
+            <param name="rol">Usuario</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RolesController.Put(Entities.DTOs.RolDTO)">
+            <summary>
+            Modifica un usuario 
+            </summary>
+            <param name="rol">usuario</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="M:GenericDataLayer.Controllers.RolesController.Delete(System.UInt64)">
+            <summary>
+            Elimina un usuario
+            </summary>
+            <param name="id">id del usuario a eliminar</param>
+            <returns>Mgr Response</returns>
+        </member>
+        <member name="T:GenericDataLayer.WebApiApplication">
+            <summary>
+            Global asax
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.WebApiApplication.Application_Start">
+            <summary>
+            Inicio de la aplicacion
+            </summary>
+        </member>
+        <member name="T:GenericDataLayer.Helpers.ModelMapping">
+            <summary>
+            Mapping de DTO a Modelos y de Modelos a TO
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToModel(Entities.DTOs.PlanoDTO)">
+            <summary>
+            Mapea un DTO a un modelo
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToModel(Entities.DTOs.RolDTO)">
+            <summary>
+            Mapea un DTO a un modelo
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToModel(Entities.DTOs.RightDTO)">
+            <summary>
+            Mapea un DTO a un modelo
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToModel(Entities.DTOs.UserDTO)">
+            <summary>
+            Mapea un DTO a un modelo
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToModel(Entities.DTOs.GroupDTO)">
+            <summary>
+            Mapea un DTO a un modelo
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToDTO(Entities.Permiso)">
+            <summary>
+            Mapea un modelo a DTO
+            </summary>
+            <param name="permiso"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToDTO(Entities.BluePrint)">
+            <summary>
+            Mapea un modelo a DTO
+            </summary>
+            <param name="plano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToDTO(Entities.Rol)">
+            <summary>
+            Mapea un modelo a DTO
+            </summary>
+            <param name="rol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToDTO(Entities.Group)">
+            <summary>
+            Converts to dto.
+            </summary>
+            <param name="grupo">The grupo.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToDTO(Entities.User)">
+            <summary>
+            Mapea un modelo a DTO
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Helpers.ModelMapping.ToDTO``2(Entities.Helpers.MgrResponse{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TOne"></typeparam>
+            <typeparam name="TTwo"></typeparam>
+            <param name="mgrResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GenericDataLayer.Managers.IUsersManager">
+            <summary>
+            interface users manager
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Delete(System.UInt64)">
+            <summary>
+            Deletes a user by id.
+            </summary>
+            <param name="idUsuario">The identifier usuario.</param>
+            <returns>UserStatus</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Login(System.String,System.String)">
+            <summary>
+            Log in a user
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Find(System.Int32)">
+            <summary>
+            Finds the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Insert(Entities.User)">
+            <summary>
+            Inserts the specified usuario.
+            </summary>
+            <param name="usuario">The usuario.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.ReturnListaGenerica``1(System.String,System.String,System.Object[])">
+            <summary>
+            Returns the lista generica.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entidad">The entidad.</param>
+            <param name="metodo">The metodo.</param>
+            <param name="parametros">The parametros.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Select(Entities.Helpers.Paging,Entities.Helpers.Ordering,System.String,System.Nullable{System.UInt64})">
+            <summary>
+            Selects the specified paginado.
+            </summary>
+            <param name="paginado">The paginado.</param>
+            <param name="orden">The orden.</param>
+            <param name="alias">The alias.</param>
+            <param name="idUsuario">The identifier usuario.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.IUsersManager.Update(Entities.User)">
+            <summary>
+            Updates the specified usuario.
+            </summary>
+            <param name="usuario">The usuario.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GenericDataLayer.Managers.RightsManager">
+            <summary>
+            Manager de permisos
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Find(System.UInt64)">
+            <summary>
+            Busca un permiso determinado
+            </summary>
+            <param name="id">id de permiso a buscar</param>
+            <returns>lista con el permiso correspondiente al id pasado como parametro o vacia</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Select(Entities.Helpers.Paging,Entities.Helpers.Ordering,System.Nullable{System.UInt64})">
+            <summary>
+            Selecciona una lista de permisos
+            </summary>
+            <param name="paginado">objeto paginado</param>
+            <param name="orden">objeto ordenamiento</param>
+            <param name="idPermiso">id del permiso</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Insert(Entities.Permiso)">
+            <summary>
+            Crea un nuevo permiso
+            </summary>
+            <param name="permiso">permiso a insertar</param>
+            <returns>permiso insertado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Update(Entities.Permiso)">
+            <summary>
+            Actualiza un permiso
+            </summary>
+            <param name="permiso">permiso a actualizar</param>
+            <returns>permiso actualizado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Delete(System.UInt64)">
+            <summary>
+            Elimina lógicamente un grupo
+            </summary>
+            <param name="idPermiso">id del grupo a eliminar</param>
+            <returns>estado de la eliminacion</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Dispose">
+            <summary>
+            Dispose this object
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.Dispose(System.Boolean)">
+            <summary>
+            implementation of dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RightsManager.ReturnListaGenerica(System.String,System.String,System.Object[])">
+            <summary>
+            carga dll
+            </summary>
+        </member>
+        <member name="T:GenericDataLayer.Managers.RolesManager">
+            <summary>
+            Manager de Planos
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Find(System.UInt64)">
+            <summary>
+            Busca un plano determinado
+            </summary>
+            <param name="id">id de plano a buscar</param>
+            <returns>lista con el plano correspondiente al id pasado como parametro o vacia</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Select(Entities.Helpers.Paging,Entities.Helpers.Ordering,System.Nullable{System.UInt64})">
+            <summary>
+            Selecciona una lista de planos
+            </summary>
+            <param name="paginado">objeto paginado</param>
+            <param name="orden">objeto ordenamiento</param>
+            <param name="idRol">id del plano</param>
+            <returns></returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Insert(Entities.Rol)">
+            <summary>
+            Crea un nuevo plano
+            </summary>
+            <param name="rol">plano a insertar</param>
+            <returns>plano insertado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Update(Entities.Rol)">
+            <summary>
+            Actualiza un plano
+            </summary>
+            <param name="rol">plano a actualizar</param>
+            <returns>plano actualizado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Delete(System.UInt64)">
+            <summary>
+            Elimina lógicamente un rol
+            </summary>
+            <param name="idRol">id del plano a eliminar</param>
+            <returns>estado de la eliminacion</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Dispose">
+            <summary>
+            Dispose this object
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.Dispose(System.Boolean)">
+            <summary>
+            implementation of dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:GenericDataLayer.Managers.RolesManager.ReturnListaGenerica(System.String,System.String,System.Object[])">
+            <summary>
+            carga dll
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.Find(System.UInt64)">
+            <summary>
+            Search for a role
+            </summary>
+            <param name="id">role id to search</param>
+            <returns>list with the role</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.Insert(Entities.Rol)">
+            <summary>
+            Crea un nuevo grupo
+            </summary>
+            <param name="rol">grupo a insertar</param>
+            <returns>grupo insertado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.Update(Entities.Rol)">
+            <summary>
+            Actualiza un grupo
+            </summary>
+            <param name="rol">grupo a actualizar</param>
+            <returns>grupo actualizado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.Delete(System.Int32)">
+            <summary>
+            Elimina lógicamente un grupo
+            </summary>
+            <param name="idRol">id del grupo a eliminar</param>
+            <returns>estado de la eliminacion</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.Dispose">
+            <summary>
+            Dispose this object
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.Dispose(System.Boolean)">
+            <summary>
+            implementation of dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserRolesManager.ReturnListaGenerica(System.String,System.String,System.Object[])">
+            <summary>
+            carga dll
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.Find(System.UInt64)">
+            <summary>
+            Busca un grupo determinado
+            </summary>
+            <param name="id">id de grupo a buscar</param>
+            <returns>lista con el grupo correspondiente al id pasado como parametro o vacia</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.Insert(Entities.Group)">
+            <summary>
+            Crea un nuevo grupo
+            </summary>
+            <param name="grupo">grupo a insertar</param>
+            <returns>grupo insertado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.Update(Entities.Group)">
+            <summary>
+            Actualiza un grupo
+            </summary>
+            <param name="grupo">grupo a actualizar</param>
+            <returns>grupo actualizado</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.Delete(System.Int32)">
+            <summary>
+            Elimina lógicamente un grupo
+            </summary>
+            <param name="idGrupo">id del grupo a eliminar</param>
+            <returns>estado de la eliminacion</returns>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.Dispose">
+            <summary>
+            Dispose this object
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.Dispose(System.Boolean)">
+            <summary>
+            implementation of dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UserGroupsManager.ReturnListaGenerica(System.String,System.String,System.Object[])">
+            <summary>
+            carga dll
+            </summary>
+        </member>
+        <member name="M:GenericDataLayer.Managers.UsersManager.Login(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

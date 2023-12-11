@@ -1,0 +1,87 @@
+﻿<div id="cover-spin"></div>
+<div data-ng-init="Inicializar()">
+
+    <h4><b>{{lblGruposIU}}</b></h4>
+    <div class="panel" style="height:760px">
+
+        <div class="row panel-body" style="width: 98%; margin-left: 1%">
+
+            <div class="row">
+
+                <a role='button' data-ng-click="go('/grupos')" class="fa fa-reply btn btn-warning pull-right" style="margin-left: 1%">&nbsp{{'index.btnBack'|translate}}</a>
+
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                
+                <div>
+
+                    <div class="row">
+
+                        <div class="col-lg-3">
+
+                            <label for="GRUPO_ID">ID</label>
+
+                            <label id="GRUPO_ID">{{group.ID}}</label>
+
+                        </div>
+
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+
+                        <div class="col-lg-3">
+
+                            <label for="GRUPO_NOMBRE">{{'index.titleName'|translate}}</label>
+
+                            <input id="GRUPO_NOMBRE" data-ng-model="group.Name" aria-readonly="true" disabled />
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <label for="GRUPO_DESCRIPCION">{{'index.description'|translate}}</label>
+
+                            <input id="GRUPO_DESCRIPCION" data-ng-model="group.Description" aria-readonly="true" disabled />
+
+                        </div>
+
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+
+                        <div class="col-lg-3">
+
+                            <label for="GRUPO_ESTADO">{{'index.ActiveChecked'|translate}}</label>
+                            <input id="GRUPO_ESTADO" type="checkbox" title="Activo" aria-readonly="true" disabled />
+
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <h5><b>{{'index.titleUsers'|translate}}</b></h5>
+
+                    <div class="container-fluid">
+
+                        <select multiple="multiple" id="lstUsers" aria-readonly="true" disabled>
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

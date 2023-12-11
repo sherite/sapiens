@@ -1,0 +1,527 @@
+﻿<!-- HTML5 App -->
+<!DOCTYPE html>
+
+<!-- Begin AngularJS app -->
+<html data-ng-app="myApp" lang="en">
+
+<head>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="content/GoogleFonts.css" />
+
+    <link href="content/font-awesome.css" rel="stylesheet" />
+
+    <!--Overlay Scrollbars-->
+    <link rel="stylesheet" href="content/OverlayScrollbars.min.css">
+
+
+    <link href="content/adminlte.css" rel="stylesheet" />
+
+    <!-- Bootstrap v3.3.7 -->
+    <link rel="stylesheet" href="content/bootstrap.css" />
+    <link rel="stylesheet" href="content/bootstrap-theme.css" />
+    <!-- JQuery -->
+    <!--<link rel="stylesheet" href="content/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="content/jquery-ui-1.10.4.custom.css" />-->
+    <!-- DatePicker Control -->
+    <!--<link rel="stylesheet" href="content/datepicker.css" />-->
+    <!-- JQ css-->
+    <!--<link rel="stylesheet" href="content/jq.css" />-->
+    <!-- Theme style -->
+    <!-- AngularJS Material -->
+    <!--<link rel="stylesheet" href="content/angular-material.min.css" />-->
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" href="content/font-awesome.css" />-->
+    <!-- Ionicons -->
+    <!--<link rel="stylesheet" href="content/ionicons.css" />-->
+    <!-- Carrousel -->
+    <link rel="stylesheet" href="content/carrousel.css" />
+    <!-- Skin -->
+    <link rel="stylesheet" href="content/skin-blue.css" />
+    <!-- Site css -->
+    <link rel="stylesheet" href="content/Site.css" />
+    <!-- Datatables styles -->
+    <!--<link rel="stylesheet" href="Scripts/Datatables/DataTables-1.10.18/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="Scripts/Datatables/FixedHeader-3.1.4/css/fixedHeader.bootstrap.css" />
+    <link rel="stylesheet" href="Scripts/Datatables/RowGroup-1.1.0/css/rowGroup.bootstrap.css" />
+    <link rel="stylesheet" href="content/bootstrap-multiselect.css" />
+    <link rel="stylesheet" href="Scripts/Datatables/Buttons-1.5.4/css/buttons.bootstrap.css" />
+    <link rel="stylesheet" href="Scripts/Datatables/FixedColumns-3.2.5/css/fixedColumns.bootstrap.css" />-->
+
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+    <link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=94461d89946ef749b7a43d14685c725d1">
+    <link href="content/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="content/responsive.bootstrap4.css" rel="stylesheet" />
+    <link href="content/buttons.bootstrap4.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+    <!-- Cover Spin -->
+    <!--<link rel="stylesheet" href="content/cover-spin.css" />-->
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+    <!-- App Title -->
+    <title>Assist Card</title>
+
+</head>
+
+<body id="myBody" class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" data-ng-controller="IndexController" data-ng-init="Initialize()">
+
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img src="images/Sapiens.png" height="60" width="60">
+        </div>
+
+        <!-- Header Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-darknavbar navbar-static-top">
+            <!-- Navbar Right Menu -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside id="leftBar" class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <!--Brand Logo-->
+            <a href="#" class="brand-link">
+                <img src="images/Sapiens.png" class="brand-image img-circle elevation-3" height="60" width="60" style="opacity: .8">
+                <span class="brand-text font-weight-light"><b>Sapiens E.R.P.</b></span>
+            </a>
+            
+            <!-- sidebar: -->
+            <div class="sidebar">
+
+                <nav class="mt-2">
+
+                    <script type="text/javascript">
+                        function ChangeArrow(ElementId) {
+                            var element = document.getElementById(ElementId);
+
+                            var expanded = sessionStorage.getItem("expanded");
+
+                            if (expanded != ElementId) {
+
+                                element.classList.add("fa-angle-down");
+                                element.classList.remove("fa-angle-left");
+
+                                document.querySelectorAll('i *:not(#target').forEach((el) => el.classList.remove("fa-angle-down"));
+                                document.querySelectorAll('i *:not(#target').forEach((el) => el.classList.add("fa-angle-left"));
+
+                                sessionStorage.setItem("expanded", ElementId);
+                            }
+                            else {
+
+                                element.classList.remove("fa-angle-down");
+                                element.classList.add("fa-angle-left");
+
+                                document.querySelectorAll('i *:not(#target').forEach((el) => el.classList.add("fa-angle-down"));
+                                document.querySelectorAll('i *:not(#target').forEach((el) => el.classList.remove("fa-angle-left"));
+
+                                sessionStorage.setItem("expanded", null);
+                            }
+
+                            return element;
+                        }
+                    </script>
+
+                    <!-- Sidebar Menu -->
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
+
+                        <!-- GENERAL DASHBOARD -->
+                        <li>
+                            <a href="#dashboard">
+                                <i class="fa fa-dashboard"></i><span style="padding:5px">{{'index.dashboard'|translate}}</span>
+                            </a>
+                        </li>
+                        <!-- GENERAL DASHBOARD END -->
+                        <!-- Verticals Begin -->
+                        <!-- ASSISTANCES -->
+                        <li class="nav-item">
+
+                            <a href="#" class="nav-link" onclick="ChangeArrow('Asistencias')">
+
+                                <i class="fa fa-shield"></i><span style="padding:10px">Asistencias</span>
+                                <span class="pull-right-container">
+                                    <i id="Asistencias" class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item"><a id="dash_assistances" href="#dash_assistances"><span style="padding:15px"></span><i class="fa fa-dashboard"></i><span style="padding:5px">Tablero de Asistencias</span></a></li>
+                                <li class="nav-item "><a href="#assistancesClausesGeneral"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Condiciones Generales</span></a></li>
+                                <li class="nav-item "><a href="#assistancesClausesParticular"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Condiciones Particulares</span></a></li>
+                                <li class="nav-item "><a href="#assistancesThirdyRisks"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Riesgo Terceros</span></a></li>
+                                <li class="nav-item "><a href="#assistancesDocuments"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Documentos</span></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- INSURANCES -->
+                        <li class="nav-item">
+
+                            <a href="#" class="nav-link" onclick="ChangeArrow('Seguros')">
+                                <i class="fa fa-shield"></i><span style="padding:10px">Seguros</span>
+                                <span class="pull-right-container">
+                                    <i id="Seguros" class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item"><a href="#dash_insurances"><span style="padding:15px"></span><i class="fa fa-dashboard"></i><span style="padding:10px">Tablero de Seguros</span></a></li>
+                                <li class="nav-item"><a href="#insurancesClausesGeneral"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Condiciones Generales</span></a></li>
+                                <li class="nav-item"><a href="#insurancesClausesParticular"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Condiciones Particulares</span></a></li>
+                                <li class="nav-item"><a href="#insurancesThirdyRisks"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Riesgo Terceros</span></a></li>
+                                <li class="nav-item"><a href="#insurancesDocuments"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Documentos</span></a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <!-- Verticals End -->
+                        <!-- PRODUCTS -->
+                        <li class="nav-item">
+
+                            <a href="#" class="nav-link" onclick="ChangeArrow('Productos')">
+                                <i class="fa fa-shield"></i><span style="padding:10px">Productos</span>
+                                <span class="pull-right-container">
+                                    <i id="Productos" class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item"><a href="#dash_products"><i class="fa fa-dashboard"></i><span style="padding:5px">Tablero de Productos</span></a></li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="ChangeArrow('ConfiguradorProductos')">
+                                        <i class="fa fa-shield"></i>
+                                        <span style="padding:5px">Configurador de Productos</span>
+                                        <span class="pull-right-container">
+                                            <i id="ConfiguradorProductos" class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+
+                                    <ul class="nav nav-treeview">
+
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Productos Base</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Productos Especiales</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Workflow</span></a></li>
+
+                                    </ul>
+
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa fa-shield"></i><span style="padding:5px">Configurador de ADDONS</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Addons Base</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Workflow</span></a></li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <!-- PRICE -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-shield"></i><span style="padding:10px">Precios</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#dash_prices">
+                                        <i class="fa fa-dashboard"></i><span style="padding:5px">Tablero de Precios</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-shield"></i><span style="padding:5px">Marco tarifario</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Listas de precio</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Convenio</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Workflow</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-shield"></i><span style="padding:5px">Modificadores de precio</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Promociones</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- QUOTES -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-shield"></i><span style="padding:10px">Cotizaciones</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#dash_quotes">
+                                        <i class="fa fa-dashboard"></i><span style="padding:5px">Tablero de Cotizaciones</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-shield"></i><span style="padding:5px">Cotizaciones</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Cotizador de productos</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Cotizador de Addons</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-shield"></i><span style="padding:5px">Emisiones</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Emisiones de Productos</span></a></li>
+                                        <li class="nav-item"><a href="#"><span style="padding:15px"></span><i class="fa fa-users"></i><span style="padding:5px">Emisiones de Addons</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <!-- ACCIDENT RATES -->
+                        <li class="nav-item">
+
+                            <a href="#" class="nav-link" onclick="ChangeArrow('Siniestralidad')">
+                                <i class="fa fa-shield"></i><span style="padding:10px">Siniestralidad</span>
+                                <span class="pull-right-container">
+                                    <i id="Siniestralidad" class="fa fa-angle-left pull-right"></i>
+                                </span>
+
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item"><a href="#dash_accident_rates"><span style="padding:15px"></span><i class="fa fa-dashboard"></i><span style="padding:5px">Tablero de Siniestralidad</span></a></li>
+                                <li class="nav-item"><a href="#dash_profit"><span style="padding:15px"></span><i class="fa fa-dashboard"></i><span style="padding:5px">Tablero de Rentabilidad</span></a></li>
+                                ><
+                            </ul>
+                        </li>
+
+                        <!-- CONFIGURATION -->
+                        <!--<li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-shield"></i><span style="padding:10px">{{'index.configuration'|translate}}</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-shield"></i><span style="padding:5px">{{'index.preferences'|translate}}</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#languages"><i class="fa fa-language"></i>{{'index.language'|translate}}</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-shield"></i><span>{{'index.security'|translate}}</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item"><a href="#grupos"><i class="fa fa-users"></i>{{'index.groups'|translate}}</a></li>
+                                        <li class="nav-item"><a href="#permisos"><i class="fa fa-lock"></i>{{'index.rights'|translate}}</a></li>
+                                        <li class="nav-item"><a href="#roles"><i class="fa fa-vcard"></i>{{'index.roles'|translate}}</a></li>
+                                        <li class="nav-item"><a href="#users"><i class="fa fa-user"></i>{{'index.users'|translate}}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>-->
+                        <!-- CONFIGURATION END -->
+
+                    </ul>
+                    <!-- Sidebar Menu end -->
+
+                </nav>
+
+            </div>
+            <!-- sidebar end -->
+
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+                <div data-ng-view>
+                    <!--***********************
+                    | Your Page Content Here |
+                    **************************-->
+                </div>
+
+            </section>
+            <!-- /.content -->
+        </div>
+
+        <!-- Content-wrapper end -->
+        <!-- Main Footer -->
+        <!--<footer class="main-footer">-->
+            <!-- Default to the left -->
+            <!--<strong>{{'index.copyright'|translate}} &copy;<a href="#contact-us">{{'index.company'|translate}}</a></strong>-->
+
+            <!-- To the right -->
+            <!--<div class="pull-right hidden-xs">
+                {{'index.anything_you_want'|translate}}
+
+            </div>
+        </footer>-->
+
+    </div>
+
+    <!--SCRIPTS -->
+    <!-- jQuery 3.3.1 -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery-ui-1.10.3.custom.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/bootstrap-alert.js"></script>
+    <script src="Scripts/bootstrap-datepicker.js"></script>
+    <script src="Scripts/OverlayScrollbars.min.js"></script>
+
+
+    <script src="Scripts/Chart.bundle.min.js"></script>
+    <script src="Scripts/Chart.js"></script>
+    <script src="Scripts/GeneralSettings.js"></script>
+
+    <!--<script src="Scripts/demo.js"></script>-->
+    <!-- AdminLTE App -->
+    <script src="Scripts/adminlte.js"></script>
+
+
+    <!-- AngularJS scripts 1.4.3 -->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-aria.min.js"></script>
+    <script src="Scripts/angular-messages.min.js"></script>
+    <script src="Scripts/angular-material.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
+    <script src="Scripts/i18nApp/vendor/angular-translate.js"></script>
+    <script src="Scripts/i18nApp/vendor/tmhDynamicLocale.js"></script>
+
+    <!-- Authentication -->
+    <!-- Angular JS Login Social -->
+    <script src="Scripts/angularjs-social-login.js"></script>
+    <!-- Facebook Social Login plugin -->
+    <script src="Scripts/angular-easyfb.min.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- Dashboard and Graphics-->
+    <script src="Scripts/fastclick.js"></script>
+    <script src="Scripts/jquery.sparkline.js"></script>
+    <script src="Scripts/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="Scripts/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="Scripts/jquery.slimscroll.js"></script>
+
+
+    <!-- Bootstrap 2.0 -->
+    <script src="Scripts/bootstrap-multiselect.js"></script>
+
+    <!-- Datatables JS 1.10.18 -->
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/buttons/js/dataTables.buttons.min.js"></script>
+
+
+
+    <script type="text/javascript" src="Scripts/Datatables/JSZip-2.5.0/jszip.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/pdfmake-0.1.36/pdfmake.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <!--<script type="text/javascript" src="Scripts/Datatables/DataTables-1.10.18/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/DataTables-1.10.18/js/dataTables.bootstrap.js"></scri-->pt>
+    <script type="text/javascript" src="Scripts/Datatables/Buttons-1.5.4/js/dataTables.buttons.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/Buttons-1.5.4/js/buttons.bootstrap.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/Buttons-1.5.4/js/buttons.html5.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/Buttons-1.5.4/js/buttons.print.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/FixedColumns-3.2.5/js/dataTables.fixedColumns.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/FixedHeader-3.1.4/js/dataTables.fixedHeader.js"></script>
+    <script type="text/javascript" src="Scripts/Datatables/RowGroup-1.1.0/js/dataTables.rowGroup.js"></script>
+    <script src="Scripts/Datatables/input.js"></script>
+
+    <!-- App -->
+    <script src="AngularJS/app.js"></script>
+
+    <!--Factorys -->
+    <script src="AngularJS/factorys/CommonDataFactory.js"></script>
+
+    <!-- Directives -->
+    <script src="AngularJS/directives/myEnter.js"></script>
+    <script src="AngularJS/directives/myCalendar.js"></script>
+
+    <!-- Core Controllers -->
+    <script src="AngularJS/controllers/IndexController.js"></script>
+    <script src="AngularJS/controllers/MainController.js"></script>
+    <script src="AngularJS/controllers/DashboardController.js"></script>
+    <script src="AngularJS/controllers/UsersController.js"></script>
+    <script src="AngularJS/controllers/GruposController.js"></script>
+    <script src="AngularJS/controllers/PermisosController.js"></script>
+    <script src="AngularJS/controllers/RolesController.js"></script>
+    <script src="AngularJS/controllers/LoginController.js"></script>
+    <script src="AngularJS/controllers/404Controller.js"></script>
+    <script src="AngularJS/controllers/500Controller.js"></script>
+    <script src="AngularJS/controllers/LanguagesController.js"></script>
+    <script src="AngularJS/controllers/ForgotPasswordController.js"></script>
+    <script src="AngularJS/controllers/RegisterController.js"></script>
+    <script src="AngularJS/controllers/RecoverPasswordController.js"></script>
+    <script src="AngularJS/controllers/ContactUsController.js"></script>
+    <script src="AngularJS/controllers/ChangePasswordController.js"></script>
+
+    <!-- Verticals-->
+    <!--Assistances-->
+    <script src="AngularJS/controllers/Verticals/Assistances/AssistancesClausesGeneralController.js"></script>
+
+</body>
+
+</html>

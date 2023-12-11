@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Entities</name>
+    </assembly>
+    <members>
+        <member name="P:Entities.DTOs.GroupGetRequestDTO.ID">
+            <summary>
+            unique identifier of Group
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.GroupGetRequestDTO.Name">
+            <summary>
+            Name of group
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.GroupGetRequestDTO.Description">
+            <summary>
+            Description of Group
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.GroupGetRequestDTO.Status">
+            <summary>
+            Status of Group
+            </summary>
+        </member>
+        <member name="T:Entities.DTOs.GroupDTO">
+            <summary>
+            DTO de Grupo
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.GroupDTO.Users">
+            <summary>
+            Lista de Usuarios
+            </summary>
+        </member>
+        <member name="T:Entities.DTOs.GenericListDTO`1">
+            <summary>
+            Lista generica
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Entities.DTOs.GenericListDTO`1.Lista">
+            <summary>
+            Lista de objeto generico
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.GenericListDTO`1.TotalFilas">
+            <summary>
+            total de filas recuperadas
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.GenericListDTO`1.CantidadPaginas">
+            <summary>
+            Cantidad de paginas totales
+            </summary>
+        </member>
+        <member name="T:Entities.DTOs.RightDTO">
+            <summary>
+            DTO de Permisos
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RightDTO.ID">
+            <summary>
+            Identificador unico
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RightDTO.Nombre">
+            <summary>
+            Nombre del permisousuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RightDTO.Descripcion">
+            <summary>
+            Descripcion del permiso
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RightDTO.ID_Estado">
+            <summary>
+            Estado de permiso
+            </summary>
+        </member>
+        <member name="T:Entities.DTOs.PlanoDTO">
+            <summary>
+            DTO de Plano
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.PlanoDTO.ID">
+            <summary>
+            Identificador unico del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.PlanoDTO.Nombre">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.PlanoDTO.ID_Estado">
+            <summary>
+            Estado de usuario
+            </summary>
+        </member>
+        <member name="T:Entities.DTOs.RolDTO">
+            <summary>
+            DTO de Usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RolDTO.Users">
+            <summary>
+            Lista de Usuarios
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RoleGetRequestDTO.ID">
+            <summary>
+            Identificador unico del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RoleGetRequestDTO.Nombre">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RoleGetRequestDTO.Descripcion">
+            <summary>
+            Apellido del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.RoleGetRequestDTO.ID_Estado">
+            <summary>
+            Estado de usuario
+            </summary>
+        </member>
+        <member name="T:Entities.DTOs.UserDTO">
+            <summary>
+            DTO de Usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.UserDTO.Groups">
+            <summary>
+            Grupos a los que pertenece el usuario.
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.UsuarioGetRequestDTO.ID">
+            <summary>
+            Identificador unico del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.UsuarioGetRequestDTO.Alias">
+            <summary>
+            Alias con que se conoce al usuario en el sistema
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.UsuarioGetRequestDTO.Name">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.UsuarioGetRequestDTO.LastName">
+            <summary>
+            Apellido del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.DTOs.UsuarioGetRequestDTO.Status">
+            <summary>
+            Estado de usuario
+            </summary>
+        </member>
+        <member name="T:Entities.Helpers.MgrResponse`1">
+            <summary>
+            Manager de Respuestas
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.MgrResponse`1.Errores">
+            <summary>
+            Lista de Errores
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.MgrResponse`1.Object">
+            <summary>
+            Objeto a devolver
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.MgrResponse`1.Status">
+            <summary>
+            Estado de la respuesta
+            </summary>
+        </member>
+        <member name="T:Entities.Helpers.ModelStateExtensions">
+            <summary>
+            Extensiones de ModelState
+            </summary>
+        </member>
+        <member name="M:Entities.Helpers.ModelStateExtensions.ToMgrResponse``1(System.Web.Http.ModelBinding.ModelStateDictionary)">
+            <summary>
+            aaa
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Entities.Helpers.Ordering">
+            <summary>
+            objeto de ordenamiento
+            </summary>
+        </member>
+        <member name="M:Entities.Helpers.Ordering.#ctor(System.String,Entities.Helpers.OrderingDB)">
+            <summary>
+            constructor
+            </summary>
+            <param name="columna"></param>
+            <param name="ordenamiento"></param>
+        </member>
+        <member name="P:Entities.Helpers.Ordering.OrderingDTO">
+            <summary>
+            objeto de ordenamiento
+            </summary>
+        </member>
+        <member name="T:Entities.Helpers.OrderingDTO">
+            <summary>
+            DTO de ordenamiento
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.OrderingDTO.OrderingRow">
+            <summary>
+            columna a ordenar
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.OrderingDTO.OrdinationSense">
+            <summary>
+            sentido de ordenamiento
+            </summary>
+        </member>
+        <member name="T:Entities.Helpers.OrderingDB">
+            <summary>
+            enum de ordenamiento
+            </summary>
+        </member>
+        <member name="F:Entities.Helpers.OrderingDB.ASC">
+            <summary>
+            Orden ascendente
+            </summary>
+        </member>
+        <member name="F:Entities.Helpers.OrderingDB.DESC">
+            <summary>
+            Orden descendente
+            </summary>
+        </member>
+        <member name="T:Entities.Helpers.Paging">
+            <summary>
+            paginado de los select
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.Paging.Pagina">
+            <summary>
+            pagina a recuperar
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.Paging.Filas">
+            <summary>
+            filas a recuperar
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.Paging.TotalFilas">
+            <summary>
+            total de registros
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.Paging.CantidadPaginas">
+            <summary>
+            total de paginas
+            </summary>
+        </member>
+        <member name="M:Entities.Helpers.Paging.#ctor(System.UInt64,System.UInt64,System.UInt64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="pagina">pagina a recuperar</param>
+            <param name="filas">filas por pagina</param>
+            <param name="totalFilas">contador de filas</param>
+        </member>
+        <member name="P:Entities.Helpers.Paging.PaginadoDTO">
+            <summary>
+            paginado DTO
+            </summary>
+        </member>
+        <member name="T:Entities.Helpers.PaginedDTO">
+            <summary>
+            DTO de paginado
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.PaginedDTO.IsEnabled">
+            <summary>
+            Estado de habilitacion del paginado
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.PaginedDTO.Page">
+            <summary>
+            pagina a devolver
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.PaginedDTO.Rows">
+            <summary>
+            Cantidad de filas por pagina
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.PaginedDTO.TotalPages">
+            <summary>
+            Cantidad de paginas basada en las filas por pagina y la totalidad de las filas
+            </summary>
+        </member>
+        <member name="P:Entities.Helpers.PaginedDTO.TotalRows">
+            <summary>
+            Total de filas encontradas
+            </summary>
+        </member>
+        <member name="T:Entities.Auditable">
+            <summary>
+            Objeto para guardar datos de auditoria
+            </summary>
+        </member>
+        <member name="P:Entities.Auditable.IDAuditoria">
+            <summary>
+            identificador unico de auditoria
+            </summary>
+        </member>
+        <member name="P:Entities.Auditable.RowVersion">
+            <summary>
+            Version de la fila
+            </summary>
+        </member>
+        <member name="T:Entities.Dojan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.CityZone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.LeadInstructor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.Phone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Entities.Dojan.FoundingDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Entities.Group">
+            <summary>
+            modelo de grupo
+            </summary>
+        </member>
+        <member name="P:Entities.Group.ID">
+            <summary>
+            Identificador unico del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Group.Name">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Group.Description">
+            <summary>
+            Apellido del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Group.Status">
+            <summary>
+            Estado de usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Group.Users">
+            <summary>
+            lista de usuarios
+            </summary>
+        </member>
+        <member name="T:Entities.Permiso">
+            <summary>
+            modelo de permiso
+            </summary>
+        </member>
+        <member name="P:Entities.Permiso.ID">
+            <summary>
+            Identificador unico del permiso
+            </summary>
+        </member>
+        <member name="P:Entities.Permiso.Nombre">
+            <summary>
+            Nombre del permiso
+            </summary>
+        </member>
+        <member name="P:Entities.Permiso.Descripcion">
+            <summary>
+            Descripcion del permiso
+            </summary>
+        </member>
+        <member name="P:Entities.Permiso.ID_Estado">
+            <summary>
+            Estado de permiso
+            </summary>
+        </member>
+        <member name="T:Entities.BluePrint">
+            <summary>
+            modelo de plano
+            </summary>
+        </member>
+        <member name="P:Entities.BluePrint.ID">
+            <summary>
+            identificador unico
+            </summary>
+        </member>
+        <member name="P:Entities.BluePrint.Name">
+            <summary>
+            nombre del plano
+            </summary>
+        </member>
+        <member name="P:Entities.BluePrint.ID_Estado">
+            <summary>
+            estado del plano
+            </summary>
+        </member>
+        <member name="T:Entities.Rol">
+            <summary>
+            modelo de grupo
+            </summary>
+        </member>
+        <member name="P:Entities.Rol.ID">
+            <summary>
+            Identificador unico del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Rol.Nombre">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Rol.Descripcion">
+            <summary>
+            Apellido del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Rol.ID_Estado">
+            <summary>
+            Estado de usuario
+            </summary>
+        </member>
+        <member name="P:Entities.Rol.Users">
+            <summary>
+            lista de usuarios
+            </summary>
+        </member>
+        <member name="T:Entities.User">
+            <summary>
+            modelo de usuario
+            </summary>
+        </member>
+        <member name="P:Entities.User.ID">
+            <summary>
+            Identificador unico del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.User.Alias">
+            <summary>
+            Alias con que se conoce al usuario en el sistema
+            </summary>
+        </member>
+        <member name="P:Entities.User.Name">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.User.LastName">
+            <summary>
+            Apellido del usuario
+            </summary>
+        </member>
+        <member name="P:Entities.User.Status">
+            <summary>
+            Estado de usuario
+            </summary>
+        </member>
+        <member name="P:Entities.User.Groups">
+            <summary>
+            Grupos a los que pertenece el usuario.
+            </summary>
+        </member>
+    </members>
+</doc>

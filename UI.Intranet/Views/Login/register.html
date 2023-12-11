@@ -1,0 +1,71 @@
+<div id="cover-spin"></div>
+
+<div class="lockscreen-wrapper" ng-init="Initialize()">
+
+    <div class="lockscreen-logo">
+
+        <img src="images/LOGO2.png" />
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-body register-card-body">
+
+            <form name="registerForm">
+
+                <div>
+
+                    <div style="display:flex">
+
+                        <input ng-model="fullName" style="margin-right:12px" type="text" class="form-control roundedCAP" placeholder="Full name" required>
+                        <span class="fa fa-user" style="float:right;font-size:30px"></span>
+
+                    </div>
+
+                    <br />
+
+                </div>
+
+                <div style="display:flex">
+
+                    <input ng-model="Email" style="margin-right:5px" type="email" class="form-control roundedCAP" placeholder="Email" required>
+                    <span class="fa fa-envelope" style="float:right;font-size:30px"></span>
+
+                </div>
+
+                <br />
+
+                <div style="display:flex">
+
+                    <input ng-model="Password1" style="margin-right:12px" type="password" class="form-control roundedCAP" placeholder="Password" required>
+                    <span class="fa fa-lock" style="float:right;font-size:30px"></span>
+
+                </div>
+
+                <br />
+
+                <div style="display:flex">
+
+                    <input ng-model="Password2" style="margin-right:12px" type="password" class="form-control roundedCAP" placeholder="Retype the password" required>
+                    <span class="fa fa-lock" style="float:right;font-size:30px"></span>
+
+                </div>
+
+                <br />
+
+                <div class="col-4">
+
+                    <button ng-disabled="registerForm.$invalid" type="submit" class="btn btn-primary btn-block">{{register}}</button>
+
+                </div>
+
+            </form>
+
+            <a href="#login" class="text-center">{{login}}</a>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,54 @@
+<div id="cover-spin"></div>
+
+<div class="lockscreen-wrapper" ng-init="Initialize()">
+
+    <div class="lockscreen-logo">
+
+        <a href="#login"><img src="images/LOGO2.png" /></a>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-body login-card-body row">
+
+            <form name="contactusForm">
+
+                <div>
+
+                    <div style="display:flex">
+
+                        <input ng-model="Name" type="text" class="form-control roundedCAP" placeholder="Name" required /> 
+                    
+                    </div>
+
+                    <br />
+
+                    <div style="display:flex">
+                        <input ng-model="Email" type="text" class="form-control roundedCAP" placeholder="Email" required />
+                    </div>
+
+                    <br />
+
+                    <div style="display:flex">
+                        <input ng-mode="Subject"type="text" class="form-control roundedCAP" placeholder="Subject" required />
+                    </div>
+
+                    <br />
+
+                    <div style="display:flex">
+                        <textarea ng-model="Message" id="inputMessage" class="form-control roundedCAP" rows="4" placeholder="Message Area" required></textarea>
+                    </div>
+
+                    <br />
+
+                    <div> 
+                        <button ng-disabled="contactusForm.$invalid" class="btn btn-primary btn-block roundedCAP" type="submit">Send message</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
